@@ -83,10 +83,10 @@ To learn more, visit [ohmyz.sh](https://ohmyz.sh), follow [@ohmyzsh](https://twi
 Oh My Zsh is installed by running one of the following commands in your terminal. You can install this via the command-line with either `curl`, `wget` or another similar tool.
 
 | Method    | Command                                                                                           |
-| :-------- | :------------------------------------------------------------------------------------------------ |
-| **curl**  | `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"` |
-| **wget**  | `sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`   |
-| **fetch** | `sh -c "$(fetch -o - https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"` |
+|:----------|:--------------------------------------------------------------------------------------------------|
+| **curl**  | `sh -c "$(curl -fsSL https://raw.githubusercontent.com/durafen/ohmyzsh/develop/tools/install.sh)"` |
+| **wget**  | `sh -c "$(wget -O- https://raw.githubusercontent.com/durafen/ohmyzsh/develop/tools/install.sh)"`   |
+| **fetch** | `sh -c "$(fetch -o - https://raw.githubusercontent.com/durafen/ohmyzsh/develop/tools/install.sh)"` |
 
 Alternatively, the installer is also mirrored outside GitHub. Using this URL instead may be required if you're in a country like India or China, that blocks `raw.githubusercontent.com`:
 
@@ -104,8 +104,8 @@ It's a good idea to inspect the install script from projects you don't yet know.
 that by downloading the install script first, looking through it so everything looks normal,
 then running it:
 
-```sh
-wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+```shell
+wget https://raw.githubusercontent.com/durafen/ohmyzsh/develop/tools/install.sh
 sh install.sh
 ```
 
@@ -115,7 +115,7 @@ If the above URL times out or otherwise fails, you may have to substitute the UR
 
 ### Plugins
 
-Oh My Zsh comes with a shitload of plugins for you to take advantage of. You can take a look in the [plugins](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins) directory and/or the [wiki](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins) to see what's currently available.
+Oh My Zsh comes with a shitload of plugins for you to take advantage of. You can take a look in the [plugins](https://github.com/durafen/ohmyzsh/tree/master/plugins) directory and/or the [wiki](https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins) to see what's currently available.
 
 #### Enabling Plugins
 
@@ -226,8 +226,8 @@ If you're running the Oh My Zsh install script as part of an automated install, 
 flag to the `install.sh` script. This will have the effect of not trying to change
 the default shell, and it also won't run `zsh` when the installation has finished.
 
-```sh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+```shell
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/durafen/ohmyzsh/develop/tools/install.sh)" "" --unattended
 ```
 
 If you're in China, India, or another country that blocks `raw.githubusercontent.com`, you may have to substitute the URL for `https://install.ohmyz.sh` for it to install.
