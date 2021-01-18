@@ -130,12 +130,12 @@ compdef _git gdnolock=git-diff
 function gdv() { git diff -w "$@" | view - }
 compdef _git gdv=git-diff
 
-alias gf='git fetch'
+alias gf='git fetch -v'
 # --jobs=<n> was added in git 2.8
 is-at-least 2.8 "$git_version" \
-  && alias gfa='git fetch --all --prune --jobs=10' \
-  || alias gfa='git fetch --all --prune'
-alias gfo='git fetch origin'
+  && alias gfa='git fetch --all --prune --jobs=10 -v' \
+  || alias gfa='git fetch --all --prune -v'
+alias gfo='git fetch origin -v'
 
 alias gfg='git ls-files | grep'
 
@@ -221,6 +221,7 @@ alias gloga='git log --oneline --decorate --graph --all'
 alias glp="_git_log_prettily"
 
 alias gm='git merge'
+alias gms='git merge --squash'
 alias gmom='git merge origin/$(git_main_branch)'
 alias gmtl='git mergetool --no-prompt'
 alias gmtlvim='git mergetool --no-prompt --tool=vimdiff'
