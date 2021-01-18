@@ -1,14 +1,14 @@
 #!/bin/sh
 #
 # This script should be run via curl:
-#   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+#   sh -c "$(curl -fsSL https://raw.githubusercontent.com/durafen/ohmyzsh/develop/tools/install.sh)"
 # or via wget:
-#   sh -c "$(wget -qO- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+#   sh -c "$(wget -qO- https://raw.githubusercontent.com/durafen/ohmyzsh/develop/tools/install.sh)"
 # or via fetch:
-#   sh -c "$(fetch -o - https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+#   sh -c "$(fetch -o - https://raw.githubusercontent.com/durafen/ohmyzsh/develop/tools/install.sh)"
 #
 # As an alternative, you can first download the install script and run it afterwards:
-#   wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh
+#   wget https://raw.githubusercontent.com/durafen/ohmyzsh/develop/tools/install.sh
 #   sh install.sh
 #
 # You can tweak the install behavior by setting variables when running the script. For
@@ -33,7 +33,7 @@
 # For example:
 #   sh install.sh --unattended
 # or:
-#   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+#   sh -c "$(curl -fsSL https://raw.githubusercontent.com/durafen/ohmyzsh/develop/tools/install.sh)" "" --unattended
 #
 set -e
 
