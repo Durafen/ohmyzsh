@@ -1,9 +1,16 @@
 alias brewp='brew pin'
-alias brews='brew list -1'
+alias brewls='brew list -1'
 alias brewsp='brew list --pinned'
-alias bubo='brew update && brew outdated'
-alias bubc='brew upgrade && brew cleanup'
-alias bubu='bubo && bubc'
-alias buf='brew upgrade --formula'
-alias bcubo='brew update && brew outdated --cask'
-alias bcubc='brew upgrade --cask && brew cleanup'
+alias brewbo='brew update && brew outdated'
+alias brewbc='brew upgrade && brew cleanup'
+alias brewbu='brewbo && brewbc'
+alias brewuf='brew upgrade --formula'
+
+alias brews="brew search $@"
+alias brewi="brew install $@"
+alias brewri="brew reinstall $@"
+alias brewf="brew info $@"
+alias brewu="brew uninstall $@"
+alias brewup="brew update && brew upgrade"
+
+alias brewdeps='brew leaves | xargs brew deps --installed --for-each | sed "s/^.*:/$(tput setaf 4)&$(tput sgr0)/"'
