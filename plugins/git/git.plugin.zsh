@@ -60,6 +60,8 @@ function git_develop_branch() {
 # (sorted alphabetically)
 #
 
+alias gshow='f() { cat ~/.oh-my-zsh/plugins/git/git.plugin.zsh | grep "$1" };f'
+
 alias g='git'
 
 alias ga='git add'
@@ -136,6 +138,7 @@ is-at-least 2.8 "$git_version" \
   && alias gfa='git fetch --all --prune --jobs=10 -v' \
   || alias gfa='git fetch --all --prune -v'
 alias gfo='git fetch origin -v'
+alias gfpr='f() { git fetch $1 pull/$2/head:pr-$1-#$2 };f'
 
 alias gfg='git ls-files | grep'
 

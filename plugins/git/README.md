@@ -12,6 +12,7 @@ plugins=(... git)
 
 | Alias                | Command                                                                                                                          |
 |:---------------------|:---------------------------------------------------------------------------------------------------------------------------------|
+| gshow                | cat ~/.oh-my-zsh/plugins/git/git.plugin.zsh | grep "git $1"                                                                      |
 | g                    | git                                                                                                                              |
 | ga                   | git add                                                                                                                          |
 | gaa                  | git add --all                                                                                                                    |
@@ -73,6 +74,7 @@ plugins=(... git)
 | gfa                  | git fetch --all --prune                                                                                                          |
 | gfg                  | git ls-files \| grep                                                                                                             |
 | gfo                  | git fetch origin                                                                                                                 |
+| gfpr                  | git fetch $1 pull/$2/head:pr-$1-#$2 }
 | gg                   | git gui citool                                                                                                                   |
 | gga                  | git gui citool --amend                                                                                                           |
 | ggf                  | git push --force origin $(current_branch)                                                                                        |
