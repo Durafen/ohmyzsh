@@ -37,7 +37,22 @@ fi
 alias bcubc='brew upgrade --cask && brew cleanup'
 alias bcubo='brew update && brew outdated --cask'
 alias brewp='brew pin'
+alias brewls='brew list -1'
 alias brewsp='brew list --pinned'
+
+alias brewbo='brew update && brew outdated'
+alias brewbc='brew upgrade && brew cleanup'
+alias brewbu='brewbo && brewbc'
+alias brewuf='brew upgrade --formula'
+alias brews="brew search $@"
+alias brewi="brew install $@"
+alias brewri="brew reinstall $@"
+alias brewf="brew info $@"
+alias brewu="brew uninstall $@"
+alias brewup="brew update && brew upgrade"
+alias brewdeps='brew leaves | xargs brew deps --installed --for-each | sed "s/^.*:/$(tput setaf 4)&$(tput sgr0)/"'
+
+
 alias bubc='brew upgrade && brew cleanup'
 alias bugbc='brew upgrade --greedy && brew cleanup'
 alias bubo='brew update && brew outdated'
@@ -48,7 +63,7 @@ alias buz='brew uninstall --zap'
 
 function brews() {
   local formulae="$(brew leaves | xargs brew deps --installed --for-each)"
-  local casks="$(brew list --cask 2>/dev/null)"
+  local casks="$(brew list --cask)"
 
   local blue="$(tput setaf 4)"
   local bold="$(tput bold)"

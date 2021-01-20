@@ -19,6 +19,7 @@ the `brew` binary before sourcing `oh-my-zsh.sh` and it'll set up the environmen
 
 ## Aliases
 
+<<<<<<< HEAD
 | Alias    | Command                                 | Description                                                         |
 | -------- | --------------------------------------- | ------------------------------------------------------------------- |
 | `bcubc`  | `brew upgrade --cask && brew cleanup`   | Update outdated casks, then run cleanup.                            |
@@ -32,6 +33,27 @@ the `brew` binary before sourcing `oh-my-zsh.sh` and it'll set up the environmen
 | `bubu`   | `bubo && bubc`                          | Do the last two operations above.                                   |
 | `bfu`    | `brew upgrade --formula`                | Upgrade only formulas (not casks).                                  |
 | `buz`    | `brew uninstall --zap`                  | Remove all files associated with a cask.                            |
+=======
+| Alias    | Command                               | Description                                                         |
+| -------- | ------------------------------------- | ------------------------------------------------------------------- |
+| `bcubc`  | `brew upgrade --cask && brew cleanup` | Update outdated casks, then run cleanup.                            |
+| `bcubo`  | `brew update && brew outdated --cask` | Update Homebrew data, then list outdated casks.                     |
+| `brewp`  | `brew pin`                            | Pin a specified formula so that it's not upgraded.                  |
+| `brewls` | `brew list -1`                       | List installed formulae or the installed files for a given formula. |
+| `brewsp` | `brew list --pinned`                  | List pinned formulae, or show the version of a given formula.       |
+| `brewbo`   | `brew update && brew outdated`        | Update Homebrew data, then list outdated formulae and casks.        |
+| `brewbc`   | `brew upgrade && brew cleanup`        | Upgrade outdated formulae and casks, then run cleanup.              |
+| `brewbu`   | `brewbo && brewbc`                        | Do the last two operations above.                                   |
+| `brewuf`    | `brew upgrade --formula`              | Upgrade only formulas (not casks).                                  |
+| `brewdeps`  | `brew leaves / xargs brew deps --installed --for-each`                              | sed "s/^.\*:/$(tput setaf 4)&$(tput sgr0)/"`| Display the dependency tree of the installed formulae |
+|          |                                       |                                                                     |
+|`brews`|`brew search $@`| Search for a formula.                                               |
+|`brewi`|`brew install  $@`| Install a formula.                                                  |
+|`brewri` | `brew reinstall  $@`| Reinstall a formula.                                                |
+|`brewf`|`brew info $@`| Get info on formula.                                                |
+|`brewu`|`brew uninstall $@`| Uninstall a forumla.                                                |
+|`brewup` | `brew update && brew upgrade`         | Update brew and upgrade all formulas.
+>>>>>>> 23c1dba2 (feat(brew plugin): added more aliases)
 
 ## Completion
 
