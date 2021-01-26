@@ -224,10 +224,10 @@ alias glp="_git_log_prettily"
 
 alias gm='git merge'
 alias gms='git merge --squash'
-alias gmom='git merge origin/$(git_main_branch)'
+alias gmom='git merge origin/$(git_current_branch)'
 alias gmt='git mergetool --no-prompt'
 alias gmtvim='git mergetool --no-prompt --tool=vimdiff'
-alias gmum='git merge upstream/$(git_main_branch)'
+alias gmum='git merge upstream/$(git_current_branch)'
 alias gma='git merge --abort'
 
 alias gp='git push'
