@@ -47,6 +47,8 @@ function git_main_branch() {
 # (sorted alphabetically)
 #
 
+alias gshow='f() { cat ~/.oh-my-zsh/plugins/git/git.plugin.zsh | grep "$1" };f'
+
 alias g='git'
 
 alias ga='git add'
@@ -111,12 +113,13 @@ compdef _git gdnolock=git-diff
 function gdv() { git diff -w "$@" | view - }
 compdef _git gdv=git-diff
 
-alias gf='git fetch'
+alias gf='git fetch -v'
 # --jobs=<n> was added in git 2.8
 is-at-least 2.8 "$git_version" \
-  && alias gfa='git fetch --all --prune --jobs=10' \
-  || alias gfa='git fetch --all --prune'
-alias gfo='git fetch origin'
+  && alias gfa='git fetch --all --prune --jobs=10 -v' \
+  || alias gfa='git fetch --all --prune -v'
+alias gfo='git fetch origin -v'
+alias gfpr='f() { git fetch $1 pull/$2/head:pr-$1-#$2 };f'
 
 alias gfg='git ls-files | grep'
 
@@ -202,10 +205,11 @@ alias gloga='git log --oneline --decorate --graph --all'
 alias glp="_git_log_prettily"
 
 alias gm='git merge'
-alias gmom='git merge origin/$(git_main_branch)'
+alias gms='git merge --squash'
+alias gmom='git merge origin/$(git_current_branch)'
 alias gmt='git mergetool --no-prompt'
 alias gmtvim='git mergetool --no-prompt --tool=vimdiff'
-alias gmum='git merge upstream/$(git_main_branch)'
+alias gmum='git merge upstream/$(git_current_branch)'
 alias gma='git merge --abort'
 
 alias gp='git push'
